@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+{% block content %}
+		
+		<br/>
+
+		<h2> Goblin’ Cakes – Sales by Quarter</h2>
+		<br/>
+			<a href="{{ url_for('First') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">1st Quarter</a>
+			<a href=" {{ url_for('Second') }} " class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">2nd Quarter</a>
+			<a href=" {{ url_for('Third') }} " class="btn btn-primary btn-lg active" role="button" aria-pressed="true">3rd Quarter</a>
+			<a href=" {{ url_for('Fourth') }} " class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">4th Quarter</a>
+
+		<br/>
+		<br/>
+		<h3> Product Table</h3>
+
+		<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Product</th>
+      <th scope="col">Type</th>
+      <th scope="col">Price (£)</th>
+      <th scope="col">Unit Sold</th>
+      <th scope="col">Quarter</th>
+
+    </tr>
+  </thead>
+    <tbody>
+            {% for cake in GoblinCakeSales %}
+               <tr>
+                  <td>{{ cake.Product }}</td>
+                  <td>{{ cake.Product_Type }}</td>
+                  <td>{{ cake.Price_per}}</td>
+                  <td>{{ cake.Unit_Sold }}</td>
+                  <td>{{ cake.Quarter }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+</table>
+{% endblock content %}

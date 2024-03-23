@@ -10,7 +10,7 @@ app = Flask(__name__, template_folder='web_templates')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///goblin_cakes.db'
 
 #binding the instance of the connection to flask application
-db = SQLAlchemy(app)
+db = SQLAlchemy(app) 
 
 #db.Model is the baseclass for the models and sqlalchemy instace. This creates GoblinCakeSales class and also by using SQLAlchemy.create_all() method in the python shell also creates tables and database
 class GoblinCakeSales(db.Model):

@@ -31,7 +31,7 @@ class GoblinCakeSales(db.Model):
 	   self.Price_per = Price_per
 	   self.Unit_Sold = Unit_Sold
 	   self.Quarter = Quarter
-
+ 
 
 
 @app.route('/')#decorator that informs flask which url should be active

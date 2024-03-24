@@ -21,7 +21,7 @@ class GoblinCakeSales(db.Model):
 	Unit_Sold = db.Column(db.Integer)
 	Quarter = db.Column(db.Integer)
 
-	#def __repr__(self):
+	#def __repr__(self): 
 		#return f"GoblinCakeSales('{self.Product}', '{self.Product_Type}', '{self.Price_per}', '{self.Unit_Sold}', '{self.Quarter}')"
 
 	#creating a constructor of the class GoblinCakeSales that initializes the variables

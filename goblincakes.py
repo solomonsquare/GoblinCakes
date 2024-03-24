@@ -4,7 +4,7 @@ from flask import Flask, escape, request, render_template, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
 
 #creating an instance of flask object and points to the folder of our templates
-app = Flask(__name__, template_folder='web_templates')
+app = Flask(__name__, template_folder='web_templates') 
 
 #connecting the sqlalchemy database with sqlite
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///goblin_cakes.db'
